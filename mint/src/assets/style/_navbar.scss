@@ -1,0 +1,29 @@
+.navbar {
+    font-weight: 500;
+    box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.2);
+
+    .navbar-toggler {
+        border: none;
+    }
+
+    .container {
+        .navbar-brand {
+            font-size: 1.4rem;
+            font-weight: 600;
+        }
+
+        .btn-primary {
+            font-size: 16px;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .navbar {    
+        .container {
+            .login-btn {
+                margin-top: 20vh;
+            }
+        }
+    }
+}

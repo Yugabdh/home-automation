@@ -81,7 +81,6 @@ function SignUpForm() {
     if(event){
       event.preventDefault();
     }
-    console.log(firstName, lastName, email, password, passwordRepeat)
     const val = validate();
     
     // Dispatch signup action

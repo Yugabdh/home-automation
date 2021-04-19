@@ -9,3 +9,5 @@ export const SIGNIN_ERROR = "SIGNIN_ERROR";
 // SIGN OUT
 export const SIGNOUT_SUCCESS = "SIGNOUT_SUCCESS";
 export const SIGNOUT_ERROR = "SIGNOUT_ERROR";
+
+export const PROCESSING = "PROCESSING";

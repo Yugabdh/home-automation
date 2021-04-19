@@ -25,7 +25,7 @@ const NavbarPage = ({ auth }) => {
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse animation="false" id="basic-navbar-nav">
-          <Nav className="ml-auto">
+          <Nav className="mr-auto">
             {
               !auth.isLoaded ? <Loader /> : 
               !auth.isEmpty ? 
@@ -33,7 +33,18 @@ const NavbarPage = ({ auth }) => {
                 <LinkContainer to="/home">
                   <Nav.Link>Home</Nav.Link>
                 </LinkContainer>
-                <button className="btn btn-primary btn-custom" type="button" onClick={(e) => dispatch(signout())}> Logout </button>
+                <LinkContainer to="/modes">
+                  <Nav.Link>Modes</Nav.Link>
+                </LinkContainer>
+              </> : <></>
+            }
+          </Nav>
+          <Nav>
+          {
+              !auth.isLoaded ? <></> : 
+              !auth.isEmpty ? 
+              <>
+                <button className="btn btn-primary login-btn" type="button" onClick={(e) => dispatch(signout())}> Logout </button>
               </> : 
               <>
                 <LinkContainer to="/sign-in">

@@ -7,6 +7,8 @@ import {
 
   SIGNOUT_SUCCESS,
   SIGNOUT_ERROR,
+
+  PROCESSING
 } from "../actions/actionTypes";
 
 const INTIAL_STATE = {
@@ -47,6 +49,13 @@ export default function authReducer(state = INTIAL_STATE, action) {
         ...state,
         errorMsg: action.errorMsg
       };
+
+    case PROCESSING:
+      return {
+        ...state,
+        flag: action.flag
+      };
+
     default:
       return state;
   }

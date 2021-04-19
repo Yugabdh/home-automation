@@ -20,11 +20,23 @@ $info: #16aaff;
 $warning: #f7b924;
 $danger: #d92550;
 $light: #eee;
-$dark: #343a40;
+$dark: #1e2124;
 $focus: #444054;
 $alternate: #794c8a;
 
 .backgroud-gradient {
     background: rgb(195,234,33);
     background: radial-gradient(circle, rgba(195,234,33,1) 0%, rgba(255,255,255,1) 100%);
+}
+
+.text-heading {
+    color: $dark;
+}
+
+.text-normal {
+    color: $dark;
+}
+
+.text-grey {
+    color: $gray-dark;
 }

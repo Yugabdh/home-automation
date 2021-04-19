@@ -3,11 +3,12 @@ body {
     font-family: 'Nunito Sans', sans-serif;
     font-weight: 400;
     height: 100vh;
+    color: $gray-dark;
 }
 
 
 main {
-    padding-top: 56px;
+    padding-top: 60px;
 }
 
 h1,
@@ -79,27 +80,6 @@ ol {
     margin: 0;
 }
 
-.section-title {
-    h2 {
-        color: $white;
-        font-size: 48px;
-        font-weight: 600;
-        text-transform: uppercase;
-    }
-    p {
-        color: $white;
-        margin-bottom: 0;
-    }
-}
-
-@media (max-width: 740px) {
-    .section-title{
-        h2 {
-            font-size: 38px;
-        }
-    } 
-}
-
 .set-bg {
     background-repeat: no-repeat;
     background-size: cover;
@@ -128,7 +108,15 @@ ol {
     width: 100%;
 }
 
-.navbar-light .navbar-toggler {
-    color: rgba(0,0,0,.5);
-    border: 0;
+
+/* _grid.scss:34 */
+.no-gutters {
+    margin-right: 0;
+    margin-left: 0;
+  
+    > .col,
+    > [class*="col-"] {
+      padding-right: 0;
+      padding-left: 0;
+    }
 }

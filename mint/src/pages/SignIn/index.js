@@ -29,7 +29,7 @@ function SignUpPage() {
                           <h4 className="mb-4">Welcome Back!</h4>
                         </div>
                         <SignInForm />
-                        <div className="text-center">
+                        <div className="text-center mt-3">
                           <Link className="small" to="/sign-up">Create an Account!</Link>
                         </div>
                       </div>

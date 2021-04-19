@@ -3,8 +3,10 @@ import { useState } from "react";
 
 import { useSelector, useDispatch } from 'react-redux';
 
-import { signinEmailPassword } from "../../redux/actions/auth";
+import { signinEmailPassword, googleSignIn } from "../../redux/actions/auth";
 import { useHistory } from "react-router-dom";
+
+import Loader from "../../components/Loader";
 
 function SignInForm() {
   const dispatch = useDispatch();
@@ -13,7 +15,7 @@ function SignInForm() {
   const [ password, setPassword] = useState('');
 
   const handleSubmit = (event) => {
-    if(event){
+    if (event){
       event.preventDefault();
     }
     dispatch(signinEmailPassword(email, password, () => history.push("/home")));
@@ -21,7 +23,15 @@ function SignInForm() {
     setPassword('');
   }
 
+  const loginWithGoogle = (event) => {
+    if (event) {
+      event.preventDefault();
+    }
+    dispatch(googleSignIn());
+  }
+
   const errorMessages = useSelector((state) => state.authReducer.errorMsg);
+  const processing = useSelector((state) => state.authReducer.flag);
 
   return (
     <form className="user" onSubmit={e => handleSubmit(e)}>
@@ -56,16 +66,17 @@ function SignInForm() {
         )
       }
 
+      <hr />
       <button
         className="btn btn-primary btn-block" 
         type="submit"
       >
         Login
       </button>
-      <button className="btn btn-danger btn-block">
+      <button className="btn btn-danger btn-block" onClick={loginWithGoogle}>
+        { processing && (<Loader />)}
         <i className="fa fa-google"></i> Sign-in with Google
       </button>
-      <hr />
     </form>
   )
 }
