@@ -2,10 +2,14 @@
 
 # dependencies
 node_modules/
-firebase/
-serviceAccount.json
 .pnp
 .pnp.js
+
+# firebase
+firebase/
+serviceAccount.json
+.firebase
+.firebaserc
 
 # testing
 /coverage
