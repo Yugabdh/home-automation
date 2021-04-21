@@ -3,6 +3,7 @@
 # dependencies
 node_modules/
 firebase/
+serviceAccount.json
 .pnp
 .pnp.js
 
